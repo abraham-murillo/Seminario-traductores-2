@@ -222,7 +222,7 @@ void analizador() {
     while (i < cadena.size()) {
       estado = funcion(estado, cadena[i]);
       if (estado >= 100) {  // Estados de error
-        cout << red << "ERROR: Se esperaba " << errores[estado - 100] << " en la posición " << i + 1 << " y se recibió '" << cadena[i] << "'\n" << reset;
+        cout << red << "ERROR: Se esperaba " << errores[estado - 100] << " en la posición " << i + 1 << " y se recibio '" << cadena[i] << "'\n" << reset;
         break;
       }
       i++;
@@ -250,7 +250,7 @@ void analizador() {
       } else if (estado == 14 || estado == 16) {
         cout << "Operador de asignacion valido\n";
       } else {
-        cout << red << "ERROR: Se esperaba " << errores[estado] << " en la última posición y no se recibió nada\n";
+        cout << red << "ERROR: Se esperaba " << errores[estado] << " en la última posicion y no se recibio nada\n";
       }
       cout << reset;
     }
@@ -266,10 +266,10 @@ int main() {
   while (op != 3) {
     system(clear.c_str());
     cout << blue << "***************************************************\n";
-    cout << "*           Analizador Lexicográfico              *\n";
+    cout << "*           Analizador Lexico                     *\n";
     cout << "***************************************************\n\n";
     cout << purple << "1) Analizar Cadenas\n";
-    cout << "2) Información sobre el Analizador\n";
+    cout << "2) Informacion sobre el Analizador\n";
     cout << "3) Salir\n";
     cout << "Seleccion -> " << reset;
     cin >> op;
@@ -288,14 +288,14 @@ int main() {
         cout << "* Flotantes con signo y sin signo\n";
         cout << "* Exponenciales\n";
         cout << "* Palabras reservadas de C\n";
-        cout << "* Operadores aritméticos de C\n";
-        cout << "* Operadores lógicos de C\n";
-        cout << "* Operadores de asignación de C (Excepto ++ y --)\n\n";
+        cout << "* Operadores aritmeticos de C\n";
+        cout << "* Operadores logicos de C\n";
+        cout << "* Operadores de asignacion de C (Excepto ++ y --)\n\n";
 
-        cout << blue << "Analizador Lexicográfico implementado por:\n" << reset;
+        cout << blue << "Analizador Lexico implementado por:\n" << reset;
         const static vector<string> nombres = {
-            "Abraham Baltazar Murillo Sandoval", "Jesús Ernesto Salas Herrera",
-            "Edgar Javier Pinedo Ceja"};
+            "Abraham Baltazar Murillo Sandoval", "Jesus Ernesto Salas Herrera",
+            "Jesus Uriel Guzman Mendoza"};
         for (auto nombre : nombres)
           cout << purple << "* " << nombre << "\n" << reset;
         break;
@@ -307,13 +307,13 @@ int main() {
       }
 
       default: {
-        cout << "Opción Inválida\n";
+        cout << "Opción Invalida\n";
         cout << "Vuelve a intentarlo\n";
         break;
       }
     }
 
-    cout << blue << "\nPresiona una caracter y <enter> para continuar...\n" << reset;
+    cout << blue << "\nPresiona un caracter y <enter> para continuar...\n" << reset;
     char continuar;
     cin >> continuar;
 
